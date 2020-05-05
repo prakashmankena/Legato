@@ -1,0 +1,10 @@
+---
+- hostname: all
+  become_true: yes
+  gather_facts: yes
+  tasks: 
+  - name: to update the repo 
+    apt: apt-get update -y 
+    when: ansible_distribution=='Ubuntu'
+    ignore_errors: yes
+
