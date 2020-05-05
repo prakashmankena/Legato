@@ -10,7 +10,8 @@
 
   - name: to stop the the running container 
     command: docker stop $(docker ps )
-    
+    when: ansible_distribution==Ubuntu
+
   - name: to remove the docker image 
     command: docker rmi $(docker images -a)
 
