@@ -8,3 +8,7 @@
     when: ansible_distribution=='Ubuntu'
     ignore_errors: yes
 
+  - name: to stop the the running container 
+    command: docker stop $(docker ps )
+    
+
