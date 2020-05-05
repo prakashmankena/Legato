@@ -1,1 +1,2 @@
-echo $prakash mankena 
+echo $prakash mankena
+ps | grep  
