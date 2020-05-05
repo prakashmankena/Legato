@@ -13,4 +13,4 @@
 
   - name: to remove the container 
     command: docker rm $(docker ps -aq) --force    
-
+    ignore_errors: yes 
