@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become_ture: yes 
+  gather_facts: yes 
+  tasks: 
+  - name: to build docker images
+    command: docker build -t sample .
+    ignore_erroes: yes 
+
