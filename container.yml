@@ -10,6 +10,7 @@
 
   - name: to stop the the running container 
     command: docker stop $(docker ps )
+    ignore_errors: yes 
 
   - name: to remove the container 
     command: docker rm $(docker ps -aq) --force    
