@@ -5,8 +5,10 @@ pipeline{
             steps{
                 echo "Welcome to Jenkins Declarative script"
                 stage("Git-hub"){
+                steps{
                     git credentialsId: 'github', url: 'https://github.com/prakashmankena/Legato'
                 }
+              }
             }
         }
     }
