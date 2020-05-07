@@ -8,6 +8,7 @@ pipeline{
                 steps{
                     git credentialsId: 'github', url: 'https://github.com/prakashmankena/Legato'
                 }
+                }
              stage("MVN Build"){
                  steps{
                     sh" mvn clean package"
