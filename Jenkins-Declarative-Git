@@ -1,0 +1,13 @@
+pipeline{
+    agent any 
+    stages{
+        stage("Welcome"){
+            steps{
+                echo "Welcome to Jenkins Declarative script"
+                stage("Git-hub"){
+                    git credentialsId: 'github', url: 'https://github.com/prakashmankena/Legato'
+                }
+            }
+        }
+    }
+}
