@@ -1,7 +1,7 @@
 pipeline{
     agent any
-    envirinment{
-        Path="apache-maven-3.6.3:bin$PATH"
+    environment{
+        Path="apache-maven-3.6.3/bin:$PATH"
         }
         stages{
             stage("git-hub"){
