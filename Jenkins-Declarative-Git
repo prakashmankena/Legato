@@ -1,10 +1,18 @@
 pipeline{
     agent any
-    stages{
+    envirinment{
+        Path="apache-maven-3.6.3:bin$PATH"
+        }
+        stages{
             stage("git-hub"){
                 steps{
                     git credentialsId: 'github', url: 'https://github.com/prakashmankena/Legato'
                 }
+             stage("MVN Build"){
+                 steps{
+                    sh" mvn clean package"
+                    }
+                    }
             }
         }
     }
